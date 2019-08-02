@@ -10,7 +10,6 @@
         <input
           class="login__input"
           placeholder="请输入手机号"
-          name="username"
           :value="`${username}`"
           type="number"
         />
@@ -20,7 +19,6 @@
         <input
           class="login__input"
           placeholder="请输入密码"
-          name="password"
           :value="`${password}`"
           type="password"
         />
@@ -38,7 +36,7 @@
 </template>
 
 <script>
-import { IMG_LOGINBG, IMG_LOGINUSER, IMG_LOGINPW} from '../../utils/Images'
+import { IMG_LOGINBG, IMG_LOGINUSER, IMG_LOGINPW} from '../utils/Images'
 
 export default {
   name: "Login",
@@ -62,7 +60,7 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .login {
   width: 100%;
   height: 100%;
@@ -132,7 +130,13 @@ export default {
 }
 .login__footer__checkboxContainer__input {
   margin-right: 5px;
+  border:solid 1px #dcdfe6;
+  border-radius: 2px;
+  width: 14px;
+  height: 14px;
+  background-color: #ffffff;
 }
+
 .login__footer__tipContainer {
 }
 .login__btn {
